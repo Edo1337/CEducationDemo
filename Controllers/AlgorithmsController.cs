@@ -12,6 +12,10 @@ namespace CReshetka.Controllers
         {
             return View();
         }
+        public IActionResult SortingAlgorithms()
+        {
+            return View();
+        }
         public IActionResult BubbleSort()
         {
             return View();
