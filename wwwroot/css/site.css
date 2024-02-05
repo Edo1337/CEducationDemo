@@ -52,3 +52,7 @@ span{
 a {
     color: coral;
 }
+
+a:hover{
+    color:darksalmon;
+}

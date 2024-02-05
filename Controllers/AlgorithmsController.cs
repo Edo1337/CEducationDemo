@@ -24,5 +24,9 @@ namespace CReshetka.Controllers
         {
             return View();
         }
+        public IActionResult InsertionSort()
+        {
+            return View();
+        }
     }
 }
