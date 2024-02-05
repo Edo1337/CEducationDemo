@@ -2,17 +2,9 @@
 
 namespace CReshetka.Controllers
 {
-    public class AlgorithmsController : Controller
+    public class SortAlgorithmsController : Controller
     {
         public IActionResult Index()
-        {
-            return View();
-        }
-        public IActionResult AlgorithmicComplexity()
-        {
-            return View();
-        }
-        public IActionResult SortingAlgorithms()
         {
             return View();
         }
