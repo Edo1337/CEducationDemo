@@ -20,5 +20,9 @@ namespace CReshetka.Controllers
         {
             return View();
         }
+        public IActionResult CocktailSort()
+        {
+            return View();
+        }
     }
 }

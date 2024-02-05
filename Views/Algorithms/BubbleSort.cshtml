@@ -11,60 +11,56 @@
         Принцип работы достаточно прост: последовательно сравниваются два рядом стоящих элемента, и если левый больше правого, то они меняются местами, после чего сравниваются следующие элементы. И так повторяется до тех пор, пока все элементы не будут упорядочены.
     </p>
 
-
-    <div style="align-content:center">
-        <iframe width="1280" height="720" src="https://www.youtube.com/embed/PD1Nn4fHcts?list=PLIIXgDT0bKw4n6pwBjymd3wCPyQ3_SLMo" title="Сортировка пузырьком (bubble sort) - Алгоритмы C#" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </div>
-
     <p>
         <h2><span>Пример сортировки пузырьком на C#:</span></h2>
     </p>
     @* упростить код не забудь!*@
 <pre>
 <code> 
-﻿using System;
+using System;
 
-namespace BubbleSort
+class BubbleSort
 {
-    internal class BubbleSort
+    static void Main()
     {
-        private static void Swap(ref int e1, ref int e2)
-        {
-            var temp = e1;
-            e1 = e2;
-            e2 = temp;
-        }
+        int[] array = { 64, 34, 25, 12, 22, 11, 90 };
 
-        public static int[] BubbleSort(ref int[] arr)
+        Console.WriteLine("Исходный массив:");
+        PrintArray(array);
+
+        BubbleSortAlgorithm(array);
+
+        Console.WriteLine("\nОтсортированный массив:");
+        PrintArray(array);
+    }
+
+    static void BubbleSortAlgorithm(int[] arr)
+    {
+        int n = arr.Length;
+        for (int i = 0; i < n - 1; i++)
         {
-            for (int i = 1; i < arr.Length; i++)
+            for (int j = 0; j < n - i - 1; j++)
             {
-                for (int j = 0; j < arr.Length - 1; j++)
+                if (arr[j] > arr[j + 1])
                 {
-                    if (arr[j] > arr[j + 1])
-                    {
-                        Swap(ref arr[j], ref arr[j + 1]);
-                    }
+                    // Обмен элементов, если они находятся в неправильном порядке
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
                 }
-            }
-
-            return arr;
-        }
-
-        static void Main(string[] args)
-        {
-            int[] nums = new int[34] { 214, 532, 124, 531, 312, 53, 7, 18, 7, 57, 5, 48, 86, 68, 68, 3, 11, 63, 5, 7, 56, 3, 6, 6, 89, 9, 34};
-
-            BubbleSort(ref nums);
-
-            for (int i = 0; i < nums.Length; i++)
-            {
-                Console.WriteLine(nums[i]);
             }
         }
     }
-}    
-    </code>
+
+    static void PrintArray(int[] arr)
+    {
+        foreach (var item in arr)
+        {
+            Console.Write(item + " ");
+        }
+        Console.WriteLine();
+    }
+}    </code>
 </pre>
 
     <p>
@@ -73,5 +69,12 @@ namespace BubbleSort
 
     <div style="align-content:center">
         <iframe width="1280" height="720" src="https://www.youtube.com/embed/Cq7SMsQBEUw" title="Bubble Sort" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
+    <p>
+        <h2><span>Объяснение от <a href="https://www.youtube.com/CODEBLOG">CODE BLOG</a></span></h2>
+    </p>
+    <div style="align-content:center">
+        <iframe width="1280" height="720" src="https://www.youtube.com/embed/PD1Nn4fHcts?list=PLIIXgDT0bKw4n6pwBjymd3wCPyQ3_SLMo" title="Сортировка пузырьком (bubble sort) - Алгоритмы C#" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
 </div>
