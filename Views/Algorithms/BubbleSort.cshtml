@@ -3,18 +3,25 @@
 }
 <h1>@ViewData["Title"]</h1>
 
-<div>
+<div class="container">
     <p>
-        Один из наиболее известных и часто спрашиваемых на собеседованиях алгоритмов сортировки. Работает за квадратичное время <span>O(n*n)</span>. Принцип работы достаточно прост: последовательно сравниваются два рядом стоящих элемента, и если левый больше правого, то они меняются местами, после чего сравниваются следующие элементы. И так повторяется до тех пор, пока все элементы не будут упорядочены.
+        Один из наиболее известных и часто спрашиваемых на собеседованиях алгоритмов сортировки. Работает за квадратичное время <span>O(n*n)</span>.
     </p>
-</div>
+    <p>
+        Принцип работы достаточно прост: последовательно сравниваются два рядом стоящих элемента, и если левый больше правого, то они меняются местами, после чего сравниваются следующие элементы. И так повторяется до тех пор, пока все элементы не будут упорядочены.
+    </p>
 
-<div style="align-content:center">
-    <iframe width="728" height="440" src="https://www.youtube.com/embed/PD1Nn4fHcts?list=PLIIXgDT0bKw4n6pwBjymd3wCPyQ3_SLMo" title="Сортировка пузырьком (bubble sort) - Алгоритмы C#" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
 
+    <div style="align-content:center">
+        <iframe width="1280" height="720" src="https://www.youtube.com/embed/PD1Nn4fHcts?list=PLIIXgDT0bKw4n6pwBjymd3wCPyQ3_SLMo" title="Сортировка пузырьком (bubble sort) - Алгоритмы C#" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
+    <p>
+        <h2><span>Пример сортировки пузырьком на C#:</span></h2>
+    </p>
+    @* упростить код не забудь!*@
 <pre>
-    <code>
+<code> 
 ﻿using System;
 
 namespace BubbleSort
@@ -46,7 +53,7 @@ namespace BubbleSort
 
         static void Main(string[] args)
         {
-            int[] nums = new int[34] { 214, 532, 124, 531, 312, 53, 7, 18, 7, 57, 5, 48, 86, 68, 68, 3, 11, 63, 5, 7, 56, 3, 6, 6, 89, 9, 34, 5, 8, 7, 3, 45, 3, 76 };
+            int[] nums = new int[34] { 214, 532, 124, 531, 312, 53, 7, 18, 7, 57, 5, 48, 86, 68, 68, 3, 11, 63, 5, 7, 56, 3, 6, 6, 89, 9, 34};
 
             BubbleSort(ref nums);
 
@@ -56,5 +63,15 @@ namespace BubbleSort
             }
         }
     }
-}    </code>
+}    
+    </code>
 </pre>
+
+    <p>
+        <h2><span>Визуализация сортировки:</span></h2>
+    </p>
+
+    <div style="align-content:center">
+        <iframe width="1280" height="720" src="https://www.youtube.com/embed/Cq7SMsQBEUw" title="Bubble Sort" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+</div>
